@@ -12,3 +12,11 @@ install:
 # command to run tests
 script:
   - python setup.py -v test
+deploy:
+  provider: pypi
+  username: "__token__"
+  password:
+    secure: "IhCW1MIghEm88hbh3SK1cP1EUQx7ctd2kaZlUanXiNM6/noZletU8lqC6jsqVPgGyHa4vnadYQ3nH1WykHwIryylsgGwOmYB2zmBwrCWKYSNBK8F3q2coJES2073Z38zUw6Qj1AKElafdTKxrvjzFCo7QCA4l8zM0iwxW6kt02oZF1A5Rbe1XZMFBqOPzRZK2bXktYFN4taibMAHIRclBoY5OrD9tGzqCONBO2awODv/aOC+vVbM67Bnzpl0yWXLB9kAACS5UqKSSHrDs5VFMpMFqXGl3Ji2Xvqe+jHKH3kOHj4t67mJgT8RZygV6DcHe8STVw02dQ/tf0ecqiMdWgLMdwgDtRCZ1dyZS6Y0hvWt8650Bk8m8ictQQ8cW8o6lQCdRNIyi1Uo+7OoiRZr8U9SEu4RP3R5DnS9bhMYoyYbDNzpWeDXX5QmHTQvqZujOOUyZZbwBqGbkI96LbXNSM73fkGHQh8rQVJanWGcb1gRhajREvtIqr6iMhHvQEgMzjaNQiO7awGPE3I/6s4Ig0shc3+yHqSwED9c2CTtfBVxaL57PIIrdbD1BNjhjf6Nw+g4ck3NyZ9gOEF/D6kVdkiUdlb2qC0bA4v036hvTOr/0v25jpnRsnOCWIBTgnndAE5H8sTmylh+W3IoymXJ6el4/aVHYoJRDXQ1GVK6vfY="
+  on:
+    all_branches: true
+  distributions: "sdist bdist_wheel"
